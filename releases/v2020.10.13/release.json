@@ -1,0 +1,85 @@
+{
+  "product_line": "Kubeform",
+  "release": "v2020.10.13",
+  "docs_url_template": "https://kubeform.com/docs/%s",
+  "kubernetes_version": "1.12+",
+  "projects": [
+    {
+      "github.com/kubeform/kubeform": {
+        "tag": "v0.2.0"
+      }
+    },
+    {
+      "github.com/kubeform/kfc": {
+        "key": "kubeform-community",
+        "tag": "v0.2.0",
+        "chartNames": [
+          "kubeform"
+        ]
+      }
+    },
+    {
+      "github.com/kubeform/installer": {
+        "tag": "v0.2.0",
+        "commands": [
+          "make update-charts CHART_VERSION=${TAG} CHART_REGISTRY=${CHART_REGISTRY} CHART_REGISTRY_URL=${CHART_REGISTRY_URL}"
+        ]
+      }
+    },
+    {
+      "github.com/appscode/charts": {
+        "charts": [
+          "github.com/kubeform/installer"
+        ],
+        "changelog": "Skip"
+      }
+    },
+    {
+      "github.com/appscode/static-assets": {
+        "commands": [
+          "release-automaton update-assets --release-file=${SCRIPT_ROOT}/releases/${RELEASE}/release.json --workspace=${WORKSPACE}"
+        ],
+        "changelog": "StandaloneWebsite"
+      }
+    },
+    {
+      "github.com/kubeform/docs": {
+        "key": "kubeform",
+        "tag": "v2020.10.13",
+        "commands": [
+          "mv ${SCRIPT_ROOT}/releases/${RELEASE}/docs_changelog.md ${WORKSPACE}/docs/CHANGELOG-${RELEASE}.md"
+        ],
+        "release_branch": "release-${TAG}"
+      }
+    },
+    {
+      "github.com/kubeform/website": {
+        "tag": "v2020.10.13",
+        "commands": [
+          "make set-assets-repo ASSETS_REPO_URL=https://github.com/appscode/static-assets",
+          "make docs",
+          "make set-version VERSION=${TAG}"
+        ],
+        "release_branch": "master",
+        "changelog": "Skip"
+      }
+    },
+    {
+      "github.com/kubeform/bundles": {
+        "tag": "v2020.10.13",
+        "commands": [
+          "release-automaton update-bundles --release-file=${SCRIPT_ROOT}/releases/${RELEASE}/release.json --workspace=${WORKSPACE} --charts-dir=charts"
+        ],
+        "release_branch": "release-${TAG}"
+      }
+    },
+    {
+      "github.com/bytebuilders/bundle-registry": {
+        "charts": [
+          "github.com/kubeform/bundles"
+        ],
+        "changelog": "Skip"
+      }
+    }
+  ]
+}

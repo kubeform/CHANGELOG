@@ -1,0 +1,356 @@
+{
+  "product_line": "Kubeform",
+  "release": "v2020.10.13",
+  "release_date": "2020-10-13T22:44:40.772470164Z",
+  "release_project_url": "https://github.com/kubeform/CHANGELOG",
+  "docs_url": "https://kubeform.com/docs/v2020.10.13",
+  "kubernetes_version": "1.12+",
+  "projects": [
+    {
+      "url": "github.com/kubeform/bundles",
+      "releases": [
+        {
+          "tag": "v2020.10.13",
+          "commits": [
+            {
+              "SHA": "0a34568",
+              "Subject": "Prepare for release v2020.10.13 (#2)"
+            },
+            {
+              "SHA": "b104dcf",
+              "Subject": "Add Kubefrom deploy button bundles (#1)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/docs",
+      "releases": [
+        {
+          "tag": "v2020.10.13",
+          "commits": [
+            {
+              "SHA": "78f9f6c",
+              "Subject": "Prepare for release v2020.10.13 (#20)"
+            },
+            {
+              "SHA": "58e4e2b",
+              "Subject": "Prepare for release v2020.10.13 (#19)"
+            },
+            {
+              "SHA": "2dfcf4b",
+              "Subject": "Update repository config (#18)"
+            },
+            {
+              "SHA": "56585d7",
+              "Subject": "Add script to open pr"
+            },
+            {
+              "SHA": "c96b32c",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "d8aad7a",
+              "Subject": "Add script to update release tracker on pr merge (#17)"
+            },
+            {
+              "SHA": "bc16fd8",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "4100f35",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "98e3597",
+              "Subject": "Pass --version flag to helm search repo command"
+            },
+            {
+              "SHA": "47d6d7e",
+              "Subject": "Fix css class for helm 3 tab"
+            },
+            {
+              "SHA": "0ef6b7c",
+              "Subject": "Update installation instructions (#16)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/installer",
+      "releases": [
+        {
+          "tag": "v0.2.0",
+          "commits": [
+            {
+              "SHA": "f026037",
+              "Subject": "Prepare for release v0.2.0 (#26)"
+            },
+            {
+              "SHA": "976cb54",
+              "Subject": "Update repository config (#25)"
+            },
+            {
+              "SHA": "2099bb8",
+              "Subject": "Update repository config (#24)"
+            },
+            {
+              "SHA": "d827a76",
+              "Subject": "Update repository config (#23)"
+            },
+            {
+              "SHA": "e4151e1",
+              "Subject": "Update Kubernetes v1.18.9 dependencies (#22)"
+            },
+            {
+              "SHA": "cd74243",
+              "Subject": "Update repository config (#21)"
+            },
+            {
+              "SHA": "cd8544b",
+              "Subject": "Update repository config (#20)"
+            },
+            {
+              "SHA": "08cd53c",
+              "Subject": "Make chart registry configurable (#19)"
+            },
+            {
+              "SHA": "503318c",
+              "Subject": "Publish to testing dir for alpha/beta releases"
+            },
+            {
+              "SHA": "e5d5848",
+              "Subject": "Update ci.yml"
+            },
+            {
+              "SHA": "c5c1816",
+              "Subject": "Enable proxy support for kfc deployment (#14)"
+            },
+            {
+              "SHA": "80caf4f",
+              "Subject": "Tag chart and app version as string for yq"
+            },
+            {
+              "SHA": "ebbcd8b",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "8e2ab75",
+              "Subject": "Update release.yml"
+            },
+            {
+              "SHA": "7e39627",
+              "Subject": "Add script to update release tracker on pr merge (#18)"
+            },
+            {
+              "SHA": "95b5165",
+              "Subject": "Update ci.yml"
+            },
+            {
+              "SHA": "3001fea",
+              "Subject": "Allow passing namespace for chart testing (#17)"
+            },
+            {
+              "SHA": "6fee2fa",
+              "Subject": "Add commands to update chart (#15)"
+            },
+            {
+              "SHA": "abe2160",
+              "Subject": "Fix chart release process (#16)"
+            },
+            {
+              "SHA": "da7b5a7",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "04d11a2",
+              "Subject": "Use recommended kubernetes app labels"
+            },
+            {
+              "SHA": "9b5abd7",
+              "Subject": "Auto generate chart readme file"
+            },
+            {
+              "SHA": "87b3281",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "2c7b2d1",
+              "Subject": "Add openapi v3 schema for chart (#11)"
+            },
+            {
+              "SHA": "a7321c1",
+              "Subject": "Apply fixes to kubeform chart (#10)"
+            },
+            {
+              "SHA": "22de125",
+              "Subject": "Use kind 0.7.0 (#9)"
+            },
+            {
+              "SHA": "9330fc8",
+              "Subject": "Update README.md"
+            },
+            {
+              "SHA": "618a0a4",
+              "Subject": "Annotate pods not only deployment"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/kfc",
+      "releases": [
+        {
+          "tag": "v0.2.0",
+          "commits": [
+            {
+              "SHA": "febd34bd",
+              "Subject": "Prepare for release v0.2.0 (#46)"
+            },
+            {
+              "SHA": "e57ee90d",
+              "Subject": "Fix observedGeneration calculation (#44)"
+            },
+            {
+              "SHA": "55927499",
+              "Subject": "Update repository config (#43)"
+            },
+            {
+              "SHA": "1415ec0a",
+              "Subject": "Update repository config (#42)"
+            },
+            {
+              "SHA": "81fce46e",
+              "Subject": "Update Kubernetes v1.18.9 dependencies (#41)"
+            },
+            {
+              "SHA": "c606c4ce",
+              "Subject": "Publish docker images to ghcr.io (#40)"
+            },
+            {
+              "SHA": "3817a72a",
+              "Subject": "Update repository config (#39)"
+            },
+            {
+              "SHA": "9ab8983b",
+              "Subject": "Update Kubernetes v1.18.9 dependencies (#38)"
+            },
+            {
+              "SHA": "68bdbd81",
+              "Subject": "Update repository config (#37)"
+            },
+            {
+              "SHA": "8a024e6d",
+              "Subject": "Update repository config (#36)"
+            },
+            {
+              "SHA": "3098c240",
+              "Subject": "Update repository config (#35)"
+            },
+            {
+              "SHA": "c8a6e57f",
+              "Subject": "Trigger e2e tests on /ok-to-test command (#34)"
+            },
+            {
+              "SHA": "1d2fbe64",
+              "Subject": "Update to Kubernetes v1.18.3 (#33)"
+            },
+            {
+              "SHA": "cd0b0f27",
+              "Subject": "Update ci.yml"
+            },
+            {
+              "SHA": "4d9cfa70",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "52e185ae",
+              "Subject": "Add script to update release tracker on pr merge (#32)"
+            },
+            {
+              "SHA": "1547ae07",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "634a2061",
+              "Subject": "Update crazy-max/ghaction-docker-buildx flag"
+            },
+            {
+              "SHA": "3d54ac20",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "127f3aa6",
+              "Subject": "Build once in CI pipeline (#31)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/kubeform",
+      "releases": [
+        {
+          "tag": "v0.2.0",
+          "commits": [
+            {
+              "SHA": "b84896b91",
+              "Subject": "Update repository config (#48)"
+            },
+            {
+              "SHA": "409988e6b",
+              "Subject": "Update repository config (#47)"
+            },
+            {
+              "SHA": "eeabd4223",
+              "Subject": "Remove gitignore rule breaking azure sdk vendoring (#45)"
+            },
+            {
+              "SHA": "17067c444",
+              "Subject": "Format CI files"
+            },
+            {
+              "SHA": "698499417",
+              "Subject": "Use code-generator v1.18.3 for generating clientset (#44)"
+            },
+            {
+              "SHA": "0e579a89b",
+              "Subject": "Update to Kubernetes v1.18.3 (#43)"
+            },
+            {
+              "SHA": "18fa0573b",
+              "Subject": "Update update-release-tracker.sh"
+            },
+            {
+              "SHA": "d6984afc6",
+              "Subject": "Add script to update release tracker on pr merge (#41)"
+            },
+            {
+              "SHA": "6ffe5f388",
+              "Subject": "Create .kodiak.toml"
+            },
+            {
+              "SHA": "1d71959ca",
+              "Subject": "Use recommended kubernetes app labels"
+            },
+            {
+              "SHA": "25f23dc23",
+              "Subject": "Trigger the workflow on push or pull request"
+            },
+            {
+              "SHA": "d6f90526c",
+              "Subject": "Update README.md"
+            },
+            {
+              "SHA": "4b59d7092",
+              "Subject": "Use controller-tools@v0.2.2 to generate structural schema (#40)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
