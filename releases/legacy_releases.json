@@ -1,0 +1,13 @@
+{
+  "ProductLine": "Kubeform",
+  "Releases": [
+    {
+      "Release": "v0.1.0",
+      "ReleaseDate": "2019-11-07T18:43:19Z",
+      "KubernetesVersion": "1.12.x+",
+      "ReleaseURL": "https://github.com/kubeform/kubeform/releases/tag/v0.1.0",
+      "ChangelogURL": "https://github.com/kubeform/kubeform/releases/tag/v0.1.0",
+      "DocsURL": "https://kubeform.com/docs/v0.1.0"
+    }
+  ]
+}

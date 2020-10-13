@@ -1,0 +1,92 @@
+name: Release
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: Set up Go 1.15
+        uses: actions/setup-go@v1
+        with:
+          go-version: 1.15
+        id: go
+
+      - name: Install yq
+        run: |
+          curl -fsSL -o yq https://github.com/mikefarah/yq/releases/download/3.3.0/yq_linux_amd64
+          chmod +x yq
+          sudo mv yq /usr/local/bin/yq
+
+      - name: Install release automaton
+        run: |
+          curl -fsSL -o release-automaton https://github.com/appscodelabs/release-automaton/releases/download/v0.0.29/release-automaton-linux-amd64
+          chmod +x release-automaton
+          sudo mv release-automaton /usr/local/bin/release-automaton
+
+      - name: Install Hugo Tools
+        run: |
+          curl -fsSL -o hugo-tools https://github.com/appscodelabs/hugo-tools/releases/download/v0.2.18/hugo-tools-linux-amd64
+          chmod +x hugo-tools
+          sudo mv hugo-tools /usr/local/bin/hugo-tools
+
+      - name: Install render-gotpl
+        run: |
+          curl -fsSL -o render-gotpl https://github.com/appscodelabs/render-gotpl/releases/download/v0.1.4/render-gotpl-linux-amd64
+          chmod +x render-gotpl
+          sudo mv render-gotpl /usr/local/bin/render-gotpl
+
+      - name: Install GitHub CLI
+        run: |
+          curl -fsSL https://github.com/github/hub/raw/master/script/get | bash -s 2.14.1
+          sudo mv bin/hub /usr/local/bin
+
+      - name: Prepare git
+        env:
+          GITHUB_USER: 1gtm
+          GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
+        run: |
+          set -x
+          git config --global user.name "1gtm"
+          git config --global user.email "1gtm@appscode.com"
+          git remote set-url origin https://${GITHUB_USER}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+
+      - name: Release
+        if: startsWith(github.event.issue.title, 'Release:') && contains(github.event.issue.html_url, '/pull/') && contains(github.event.issue.labels, 'locked') == false
+        env:
+          GITHUB_USER: 1gtm
+          GITHUB_TOKEN: ${{ secrets.LGTM_GITHUB_TOKEN }}
+          RELEASE_TRACKER: ${{ github.event.issue.html_url }}
+          PR_TITLE: ${{ github.event.issue.title }}
+        run: |
+          title="${{ github.event.issue.title }}"
+          while IFS=$': \r\t' read -r marker v ignored; do
+              case $marker in
+                  Release)
+                      export RELEASE=$(echo $v | tr -d '\r\t')
+                      ;;
+              esac
+          done <<< "$title"
+
+          [ ! -z "$RELEASE" ] || {
+              echo "Release number not found in issue title."
+              exit 0
+          }
+
+          hub pr checkout ${{ github.event.issue.number }}
+
+          release-automaton release run \
+            --release-tracker=${{ github.event.issue.html_url }} \
+            --release-file=./releases/${RELEASE}/release.json \
+            --comment-id=${{ github.event.comment.id }}
+
+          release-automaton release readme
+          git add --all
+          git commit -a -s -m "Update release table" || true
+          git push origin HEAD || true
