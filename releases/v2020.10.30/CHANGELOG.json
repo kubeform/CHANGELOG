@@ -1,0 +1,132 @@
+{
+  "product_line": "Kubeform",
+  "release": "v2020.10.30",
+  "release_date": "2020-10-31T04:25:44.347204493Z",
+  "release_project_url": "https://github.com/kubeform/CHANGELOG",
+  "docs_url": "https://kubeform.com/docs/v2020.10.30",
+  "kubernetes_version": "1.14+",
+  "projects": [
+    {
+      "url": "github.com/kubeform/bundles",
+      "releases": [
+        {
+          "tag": "v2020.10.30",
+          "commits": [
+            {
+              "SHA": "29666ec",
+              "Subject": "Prepare for release v2020.10.30 (#3)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/docs",
+      "releases": [
+        {
+          "tag": "v2020.10.30",
+          "commits": [
+            {
+              "SHA": "087721c",
+              "Subject": "Prepare for release v2020.10.30 (#23)"
+            },
+            {
+              "SHA": "fc971c4",
+              "Subject": "Update install instructions with license (#22)"
+            },
+            {
+              "SHA": "46c360e",
+              "Subject": "Update docs (#21)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/installer",
+      "releases": [
+        {
+          "tag": "v0.3.0",
+          "commits": [
+            {
+              "SHA": "11bcfb1",
+              "Subject": "Prepare for release v0.3.0 (#31)"
+            },
+            {
+              "SHA": "1a26a4d",
+              "Subject": "Update Kubernetes v1.18.9 dependencies (#30)"
+            },
+            {
+              "SHA": "6c6a84f",
+              "Subject": "Update repository config (#29)"
+            },
+            {
+              "SHA": "fa6cda4",
+              "Subject": "Update Kubernetes v1.18.9 dependencies (#28)"
+            },
+            {
+              "SHA": "558d1b6",
+              "Subject": "Update license documentation link"
+            },
+            {
+              "SHA": "2f15a6f",
+              "Subject": "Add license verification (#27)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/kfc",
+      "releases": [
+        {
+          "tag": "v0.3.0",
+          "commits": [
+            {
+              "SHA": "83b5c700",
+              "Subject": "Prepare for release v0.3.0 (#51)"
+            },
+            {
+              "SHA": "800170ad",
+              "Subject": "Update Kubernetes v1.18.9 dependencies (#50)"
+            },
+            {
+              "SHA": "0e334c70",
+              "Subject": "Update repository config (#49)"
+            },
+            {
+              "SHA": "a4358235",
+              "Subject": "Update Kubernetes v1.18.9 dependencies (#48)"
+            },
+            {
+              "SHA": "bb06b392",
+              "Subject": "Add license verifier (#47)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "url": "github.com/kubeform/kubeform",
+      "releases": [
+        {
+          "tag": "v0.3.0",
+          "commits": [
+            {
+              "SHA": "5b6dcc2e4",
+              "Subject": "Update CRDs"
+            },
+            {
+              "SHA": "b19950220",
+              "Subject": "Update repository config (#52)"
+            },
+            {
+              "SHA": "a1ac52c32",
+              "Subject": "Update url for k8s api reference"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
