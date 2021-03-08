@@ -26,13 +26,13 @@ jobs:
 
       - name: Install release automaton
         run: |
-          curl -fsSL -o release-automaton https://github.com/appscodelabs/release-automaton/releases/download/v0.0.34/release-automaton-linux-amd64
+          curl -fsSL -o release-automaton https://github.com/appscodelabs/release-automaton/releases/download/v0.0.35/release-automaton-linux-amd64
           chmod +x release-automaton
           sudo mv release-automaton /usr/local/bin/release-automaton
 
       - name: Install Hugo Tools
         run: |
-          curl -fsSL -o hugo-tools https://github.com/appscodelabs/hugo-tools/releases/download/v0.2.20/hugo-tools-linux-amd64
+          curl -fsSL -o hugo-tools https://github.com/appscodelabs/hugo-tools/releases/download/v0.2.21/hugo-tools-linux-amd64
           chmod +x hugo-tools
           sudo mv hugo-tools /usr/local/bin/hugo-tools
 
